@@ -91,3 +91,81 @@ for i in range(2, 101, 2):
     print(i)
 
 
+# 1080
+
+maior = 0
+posicao = 0
+for i in range(1, 101):
+    num = int(input())
+    if num > maior:
+        maior = num
+        posicao = i
+print(maior)
+print(posicao)
+
+
+# 1094
+
+n = int(input())
+total = coelhos = ratos = sapos = 0
+
+
+
+
+for _ in range(n):
+    quantidade, tipo = input().split()
+    quantidade = int(quantidade)
+    total += quantidade
+    if tipo == 'C':
+        coelhos += quantidade
+    elif tipo == 'R':
+        ratos += quantidade
+    elif tipo == 'S':
+        sapos += quantidade
+
+
+print(f"Total: {total} cobaias")
+print(f"Total de coelhos: {coelhos}")
+print(f"Total de ratos: {ratos}")
+print(f"Total de sapos: {sapos}")
+print(f"Percentual de coelhos: {coelhos / total * 100:.2f} %")
+print(f"Percentual de ratos: {ratos / total * 100:.2f} %")
+print(f"Percentual de sapos: {sapos / total * 100:.2f} %")
+
+
+# 1114
+
+
+while True:
+    senha = int(input())
+    if senha == 2002:
+        print("Acesso Permitido")
+        break
+    else:
+        print("Senha Invalida")
+
+
+# 1116
+
+n = int(input())
+for _ in range(n):
+    x, y = map(int, input().split())
+    if y == 0:
+        print("divisao impossivel")
+    else:
+        print(f"{x / y:.1f}")
+
+
+# 1151
+
+
+n = int(input())
+a, b = 0, 1
+for i in range(n):
+    print(a, end=' ' if i < n - 1 else '\n')
+    a, b = b, a + b
+
+
+
+
+
